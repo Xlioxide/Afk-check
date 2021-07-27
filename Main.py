@@ -1,4 +1,4 @@
-class ServerNuker():
+class AfkCheck():
     __version__ = 3.5
 
 import discord, subprocess, sys, time, os, colorama, base64, codecs, datetime, io, random, numpy, datetime, smtplib, string, ctypes, pokepy
@@ -23,7 +23,7 @@ from gtts import gTTS
 from randomuser import RandomUser
 from pythonping import ping as pyping
 
-ctypes.windll.kernel32.SetConsoleTitleW(f'[Flash Server Wizz Tool v{ServerNuker.__version__}] | Loading in...')
+ctypes.windll.kernel32.SetConsoleTitleW(f'[Tirus Anti Afk v{AfkCheck.__version__}] | Loading in...')
 
 with open('config.json') as f:
     config = json.load(f)
@@ -45,7 +45,7 @@ def startprint():
                      {Fore.RED}/\__  _\ /\ \   /\  == \   /\ \/\ \   /\  ___\   
                      {Fore.RED}\/_/\ \/ \ \ \  \ \  __<   \ \ \_\ \  \ \___  \  
                         {Fore.RED}\ \_\  \ \_\  \ \_\ \_\  \ \_____\  \/\_____\ 
-                          {Fore.RED\/_/   \/_/   \/_/ /_/   \/_____/   \/_____/ 
+                         {Fore.RED}\/_/   \/_/   \/_/ /_/   \/_____/   \/_____/ 
                                                  
                                          
                                     
@@ -68,7 +68,7 @@ def Init():
         token = config.get('token')
         try:
             Ioxide.run(token, bot=False, reconnect=True)
-            os.system(f'title [ Flash Nuker ] - Version {ServerNuker.__version__}')
+            os.system(f'title [ Tirus Afk Check ] - Version {AfkCheck.__version__}')
         except discord.errors.LoginFailure:
             print(f"{Fore.WHITE}[ERROR] {Fore.YELLOW}Sure this is a token? lol"+Fore.RESET)
             os.system('pause >NUL')
@@ -175,7 +175,7 @@ async def help(ctx):
     await ctx.message.delete()
     em = discord.Embed(title="_Tirus W_",color= discord.Color(0x000000))
     em.add_field(name="_*AntiAfk and afk*_",value="Im Always Here",inline=False)
-    em.set_image(url="https://media1.tenor.com/images/cedf45c21467197758874dec0f640056/tenor.gif?itemid=12494509")
+    em.set_image(url="https://cdn.discordapp.com/attachments/869615378169483305/869622163710279680/Jrw0YNa.gif")
     em.set_footer(text="Im Always Here")
     await ctx.send(embed=em)
 if __name__ == '__main__':
